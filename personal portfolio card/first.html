@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Card</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {
+        cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='32' width='32'><text y='50%' font-size='24'>🤓</text></svg>") 16 16, auto;
+      background: #000000;
+      min-height: 100vh;
+    }
+    .main-card {
+      max-width: 600px; /* WIDER CARD */
+      border: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin: 2rem auto;
+    }
+    .main-card:hover {
+      transform: translateY(-5px);
+    }
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: -60px;
+      border: 4px solid white;
+    }
+    .social-icons a {
+      color: #333;
+      margin: 0 8px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0d6efd;
+    }
+    .section-title {
+      color: #ffffff;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .skill-card, .project-card {
+      background-color: #ffffff;
+      border: none;
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s;
+    }
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-4px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Profile Card -->
+  <div class="card text-center main-card" id="profileCard">
+    <div class="card-body">
+      <img
+        src="Vedansh Gure.jpg"
+        alt="Profile Picture"
+        class="profile-img"
+      />
+      <h4 class="card-title mt-3">Vedansh Gure</h4>
+      <p class="card-text">
+        Web Developer | Designer | Creator
+      </p>
+      <p class="card-text">
+        I am passionate about building modern, responsive web applications using the latest technologies. I love solving real-world problems with clean and efficient code.My goal is to grow as a professional web developer and expand my expertise across the entire development stack. I am also excited about the prospect of working as a freelancer, where I can collaborate with clients and bring their ideas to life through thoughtful design and robust functionality
+      </p>
+
+      <div class="social-icons mb-3">
+        <a href="https://github.com/VedanshGure" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://in.linkedin.com/in/vedansh-gure-806423247" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/Vedansh_Gure?t=kqPcB9nf4uOa34wIC9ZgKA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <a href="#" class="btn btn-primary">
+        <i class="fas fa-download me-2"></i> Download Resume
+      </a>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <h2 class="section-title">My Skills</h2>
+<div class="container">
+  <div class="row g-3 justify-content-center">
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fab fa-html5 fa-2x text-danger mb-2"></i>
+        <h6>HTML</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fab fa-css3-alt fa-2x text-primary mb-2"></i>
+        <h6>CSS</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fab fa-js fa-2x text-warning mb-2"></i>
+        <h6>JavaScript</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fas fa-database fa-2x text-success mb-2"></i>
+        <h6>MongoDB</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fab fa-node fa-2x text-success mb-2"></i>
+        <h6>Node.js</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card skill-card">
+        <i class="fab fa-react fa-2x text-info mb-2"></i>
+        <h6>React</h6>
+      </div>
+    </div>
+    <div class="col-6 col-md-3"  id="sqlCard">
+      <div class="card skill-card">
+        <i class="fas fa-database fa-2x text-secondary mb-2"></i>
+        <h6>SQL</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Projects Section -->
+  <h2 class="section-title">My Projects</h2>
+  <div class="container pb-4">
+    <div class="row g-3 justify-content-center">
+      <div class="col-12 col-md-4">
+        <div class="card project-card">
+          <h5>Portfolio Website</h5>
+          <p class="small">A personal website to showcase my work and skills.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card project-card">
+          <h5>Task Manager App</h5>
+          <p class="small">A web app for managing daily tasks with MongoDB backend.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card project-card">
+          <h5>Blog Platform</h5>
+          <p class="small">A full-stack blog platform built with Node.js and Express.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4 text-center" style="background: #222; color: #fff;">
+  <h4>Hire me???</h4>
+  <button id="yesBtn" class="btn btn-success m-2">Yes, obviously.</button>
+  <button id="noBtn" class="btn btn-danger m-2">No, I will miss the chance.</button>
+</div>
+
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  ></script>
+
+  <!-- Background Toggle Script -->
+ <script>
+  const card = document.getElementById('profileCard');
+  const body = document.body;
+
+  const colors = [
+    "#2C3E50", // Charcoal
+    "#34495E", // Dark Slate Gray
+    "#2F4F4F", // Gunmetal
+    "#000000", // Black
+    "#2E003E", // Deep Purple
+    "#3D3D29", // Dark Olive
+    "#12343B", // Deep Teal
+    "#3E0E2F", // Dark Burgundy
+    "#1B2631", // Dark Indigo
+    "#1A1A1A"  // Very Dark Gray
+  ];
+
+
+  let colorIndex = 0;
+
+  card.addEventListener('click', () => {
+    colorIndex = (colorIndex + 1) % colors.length;
+    body.style.backgroundColor = colors[colorIndex];
+  });
+
+  const sqlCard = document.getElementById('sqlCard');
+
+  sqlCard.addEventListener('click', () => {
+    sqlCard.style.display = 'none';
+  });
+
+  const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+
+yesBtn.addEventListener('click', () => {
+  alert("🎉 Great choice! I look forward to working with you.");
+});
+
+noBtn.addEventListener('click', () => {
+  function askAgain() {
+    if (confirm("Are you sure? You will really miss the chance!")) {
+      askAgain(); // Keep asking again
+    } else {
+      alert("Smart move. Let's get started!");
+    }
+  }
+  askAgain();
+});
+
+  
+</script>
+
+</body>
+</html>
