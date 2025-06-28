@@ -1,3 +1,3 @@
 # MyPortfolio
-just to practice
-something i made during a bootcamp i attended.
+just to practice.
+Something i made during a bootcamp i attended.
